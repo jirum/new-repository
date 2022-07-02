@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Position</title>
+    <style>
+        body{
+            height: 4000px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+        .container  {
+            position: relative; /*means that you can manipulate top bottom */
+            width: 500px;
+            height: 500px;
+            background: #333;
+        }
+        #box-1 {
+            position: relative;
+            top: 50px;
+            left: 50px;
+            z-index: 1; /* to put the div in frront */
+            background: red;
+        }
+        #box-2 {
+            background: yellow;
+            position: absolute; /*means that you can manipulate top bottom within the container */
+            top: 100px;
+            left: 100px;
+        }
+        #box-3 {
+            background: green;
+            position: absolute;
+            bottom: 100px;
+            right: 100px;
+        }
+        #box-4 {
+            background: blue;
+            position: fixed;
+        }
+        #box-5 {
+            position: sticky;
+            top: 0;
+            background: orange;
+            z-index: -1;
+
+        }
+    </style>
+</head>
+<body>
+<div id="box-1" class="box"></div>
+<div class="container">
+<div id="box-2" class="box"></div>
+<div id="box-3" class="box"></div>
+</div>
+<div id="box-4" class="box"></div>
+<div id="box-5" class="box"></div>
+</body>
+</html>
